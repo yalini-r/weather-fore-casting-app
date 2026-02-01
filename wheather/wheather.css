@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/*BACKGROUND VIDEO */
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay for readability */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+/* GLASS CARD */
+#outer-box {
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 28px 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease;
+}
+
+#outer-box:hover {
+  transform: translateY(-4px);
+}
+
+/*SEARCH */
+#box-1 {
+  position: relative;
+  width: 100%;
+}
+
+#inp1 {
+  width: 100%;
+  padding: 12px 44px 12px 14px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+#icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
+}
+
+/* 🌤 WEATHER CONTENT */
+.wheather {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wheather-img {
+  width: 110px;
+  max-width: 100%;
+}
+
+.temp {
+  font-size: clamp(2.2rem, 5vw, 2.6rem);
+  margin: 8px 0;
+}
+
+.city {
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  opacity: 0.95;
+}
+
+/*DETAILS */
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.col img {
+  width: 46px;
+}
+
+.hmd,
+.wind {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.para {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* 📱 SMALL PHONES */
+@media (max-width: 380px) {
+  #outer-box {
+    padding: 24px 18px;
+  }
+
+  .details {
+    gap: 10px;
+  }
+
+  .wheather-img {
+    width: 95px;
+  }
+}
+
+/*ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  #bg-video {
+    display: none;
+  }
+}

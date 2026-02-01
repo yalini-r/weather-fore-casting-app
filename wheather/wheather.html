@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./wheather.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+</head>
+
+<body>
+
+<!--Background Video -->
+<video autoplay muted loop id="bg-video">
+  <source src="./assets/videos/default.mp4" type="video/mp4" />
+</video>
+
+<div id="overlay"></div>
+
+<div id="outer-box">
+
+  <div class="search">
+    <div id="box-1">
+      <input type="text" id="inp1" placeholder="Enter a city name" />
+      <i id="icon" class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+
+  <div class="wheather">
+    <img src="./assets/clr.png" class="wheather-img">
+    <h1 class="temp">22°C</h1>
+    <h2 class="city">New York</h2>
+
+    <div class="details">
+
+      <div class="col">
+        <img src="./assets/hm.png">
+        <p class="hmd">50%</p>
+        <p class="para">Humidity</p>
+      </div>
+
+      <div class="col">
+        <img src="./assets/ws1.webp">
+        <p class="wind">15 km/hr</p>
+        <p class="para">Wind Speed</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="./wheather.js"></script>
+</body>
+</html>
