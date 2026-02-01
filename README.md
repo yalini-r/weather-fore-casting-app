@@ -14,8 +14,8 @@ A responsive weather application with **dynamic video backgrounds** based on rea
 - Accessibility friendly (reduced motion support)
 
 ---
+![Weather App Screenshot](screenshots/weather.png)
 
-![Weather App Screenshot](wheather/assets/weather.png)
 
 ## 🛠️ Tech Stack
 
